@@ -10,12 +10,22 @@ loadSprite("kartka","kartka.png")
 
 loadSprite("saniey","saniey.png")
 
+loadSound("muzyka","cicha_noc.mp3")
+
 add([
     sprite("kartka"),
     pos(0,0)
 ])
 
-add([
+const saniey = add([
     sprite("saniey"),
     pos(50,200)
 ])
+
+add([play("muzyka")])
+
+onUpdate(()=>{
+    if(saniey.pos.x<500)
+    saniey.pos.x += 1
+})
+
