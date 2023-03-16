@@ -22,10 +22,11 @@ const saniey = add([
     pos(50,200)
 ])
 
-add([play("muzyka")])
+
 
 onUpdate(()=>{
     if(saniey.pos.x<500)
     saniey.pos.x += 1
 })
 
+onKeyRelease('space', ()=> play('muzyka'))
